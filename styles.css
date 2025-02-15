@@ -7,6 +7,7 @@
   --white: hsl(0, 0%, 100%);
   --green: hsl(75, 94%, 57%);
   --radius-one: 20px;
+  --button-padding: 6px 12px;
 }
 
 .attribution {
@@ -49,15 +50,27 @@ ul {
   gap: var(--spacing-two);
   margin: auto;
   list-style: none;
-  align-items: center;
   width: 100%;
+  padding: 0;
 }
 
 li {
+  display: block;
   width: 100%;
 }
 li a {
   background-color: var(--grey-700);
+  display: block;
+  text-align: center;
+  padding: var(--button-padding);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+li a:hover {
+  background-color: var(--green);
+  color: var(--grey-900);
 }
 
 .avatar {
