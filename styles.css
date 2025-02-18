@@ -6,7 +6,7 @@
   font-weight: 400;
   font-style: normal;
 }
-.inter-medium {
+.inter-semibold {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -21,8 +21,8 @@
 
 :root {
   --padding-one: 40px;
-  --spacing-one: 32px;
-  --spacing-two: 12px;
+  --spacing-one: 24px;
+  --spacing-two: 16px;
   --spacing-three: 6px;
   --grey-900: hsl(0, 0%, 8%);
   --grey-800: hsl(0, 0%, 12%);
@@ -30,26 +30,17 @@
   --white: hsl(0, 0%, 100%);
   --green: hsl(75, 94%, 57%);
   --radius-one: 20px;
-  --button-padding: 6px 12px;
+  --button-padding: 12px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin: 12px 0;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-.demo {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 10;
-  opacity: 0;
+  color: var(--green);
+  text-decoration: none;
 }
 
 body,
@@ -79,8 +70,8 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--grey-800);
   display: flex;
-  width: 390px;
-  height: 610px;
+  width: 384px;
+  height: 611px;
   flex-direction: column;
   margin: auto;
   align-items: center;
@@ -89,22 +80,18 @@ main {
   gap: var(--spacing-one);
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 440px;
-  gap: var(--spacing-two);
-  width: 100%;
-}
-
 .title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4px;
 }
 .location {
   color: var(--green);
+  font-size: 14px;
+}
+.baseline {
+  font-size: 14px;
 }
 
 ul {
@@ -120,6 +107,7 @@ ul {
 li {
   display: block;
   width: 100%;
+  padding: 0 8px;
 }
 li a {
   background-color: var(--grey-700);
@@ -130,6 +118,7 @@ li a {
   color: var(--white);
   border-radius: 8px;
   transition: background-color 0.2s ease;
+  font-size: 14px;
 }
 li a:hover {
   background-color: var(--green);
@@ -139,6 +128,14 @@ li a:hover {
 .avatar {
   margin: auto;
   border-radius: 100%;
-  width: 90px;
-  height: 90px;
+  width: 88px;
+  height: 88px;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 327px;
+    height: 579px;
+    padding: var(--spacing-one);
+  }
 }
