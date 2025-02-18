@@ -81,6 +81,12 @@ main {
   gap: var(--spacing-one);
 }
 
+footer {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
 .title {
   display: flex;
   flex-direction: column;
